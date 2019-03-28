@@ -19,6 +19,10 @@ public class Student implements java.io.Serializable {
 	@Column
 	private String pesel;
 	
+	public Student() {
+		
+	}
+	
 	public long getId() {
 		return id;
 	}
@@ -27,9 +31,6 @@ public class Student implements java.io.Serializable {
 		this.id = id;
 	}
 
-	public Student() {
-		
-	}
 
 	public String getName() {
 		return name;
@@ -53,6 +54,10 @@ public class Student implements java.io.Serializable {
 
 	public void setPesel(String pesel) {
 		this.pesel = pesel;
+	}
+	
+	public String toString() {
+		return "Student: " + getName() + " " + getSurname() + " (pesel: " + getPesel() + ")";
 	}
 	
 }

@@ -21,7 +21,7 @@ public class SchoolClassesController {
 
     	model.addAttribute("schoolClasses", DatabaseConnector.getInstance().getSchoolClasses());
     	
-        return "schoolClasses";    
+        return "schoolClassesList";    
     }
     
     @RequestMapping(value="/AddSchoolClass")
@@ -52,7 +52,7 @@ public class SchoolClassesController {
        	model.addAttribute("schoolClasses", DatabaseConnector.getInstance().getSchoolClasses());
     	model.addAttribute("message", "Nowa klasa została dodana");
          	
-    	return "schoolClasses";
+    	return "schoolClassesList";
     }
     
     @RequestMapping(value="/DeleteSchoolClass", method=RequestMethod.POST)
@@ -65,6 +65,6 @@ public class SchoolClassesController {
        	model.addAttribute("schoolClasses", DatabaseConnector.getInstance().getSchoolClasses());
     	model.addAttribute("message", "Klasa została usunięta");
          	
-    	return "schoolClasses";
+    	return "schoolClassesList";
     }
 }

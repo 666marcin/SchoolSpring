@@ -73,6 +73,6 @@ public class SchoolClass implements java.io.Serializable {
 	}
 
 	public String toString() {
-		return "Class: " + profile + " (Started: " + getStartYear() + ", Current year: " + getCurrentYear() + ")";
+		return "Class: " + getProfile() + " (Started: " + getStartYear() + ", Current year: " + getCurrentYear() + ")";
 	}
 }
